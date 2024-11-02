@@ -1,9 +1,11 @@
 from flask import Flask
+import requests
 
 app = Flask(__name__)
 
 @app.route("/")
 def helloworld():
+    r = request.get('https://lab.gchungsy5.workers.dev/', verify=False)
     return "Hello World!"
 
 if __name__ == "__main__":
