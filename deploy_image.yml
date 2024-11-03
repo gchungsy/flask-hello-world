@@ -1,0 +1,5 @@
+---
+- hosts: dockerhost
+  tasks:
+    - name: create container
+      command: docker run -d --name flask-hello-app -p 8082:8080 myregistry:5000/flask-hello:latest
