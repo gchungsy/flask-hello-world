@@ -1,0 +1,14 @@
+---
+- hosts: ansible
+
+  tasks:
+  - name: create docker image
+    command: docker build -t flask-hello .
+    args:
+      chdir: /opt/docker
+
+  - name: tag image
+    command: docker tag flask-hello myregistry:5000/flask-hello:v1
+
+  - name: push image to registry
+    command: docker push myregistry:5000/flask-hello:v1
