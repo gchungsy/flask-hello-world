@@ -16,7 +16,6 @@ def helloworld():
     <body>
         <h1>Welcome to My Flask App!</h1>
         <p>This is a simple HTML page served by Flask.</p>
-        <p>This is a simple HTML page served by Flask.</p>
     </body>
     </html>
     """
