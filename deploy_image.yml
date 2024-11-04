@@ -1,5 +1,14 @@
 ---
 - hosts: dockerhost
   tasks:
+    - name: stop existing container
+      command: docker stop flask-hello-app
+      ignore_errors: yes
+    - name: remove existing container
+      command: docker rm flask-hello-app
+      ignore_errors: yes
+    - name: remove image
+      command: myregistry:5000/flask-hello
+      ignore_errors: yes
     - name: create container
-      command: docker run -d --name flask-hello-app -p 8082:8080 myregistry:5000/flask-hello:latest
+      command: docker run -d --name flask-hello-app -p 8080:8000 myregistry:5000/flask-hello:latest
