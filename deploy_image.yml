@@ -11,4 +11,4 @@
       command: myregistry:5000/flask-hello
       ignore_errors: yes
     - name: create container
-      command: docker run -d --name flask-hello-app -p 8080:8000 myregistry:5000/flask-hello:latest
+      command: docker run -d --name flask-hello-app -p 8000:8000 myregistry:5000/flask-hello:v2

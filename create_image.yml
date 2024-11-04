@@ -8,7 +8,7 @@
       chdir: /opt/docker
 
   - name: tag image
-    command: docker tag flask-hello myregistry:5000/flask-hello:latest
+    command: docker tag flask-hello myregistry:5000/flask-hello:v2
 
   - name: push image to registry
-    command: docker push myregistry:5000/flask-hello:latest
+    command: docker push myregistry:5000/flask-hello:v2
