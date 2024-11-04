@@ -1,2 +1,2 @@
 # flask-hello-world
- This repo was created for purposes of testing CI pipeline
+ This repo was created for showcasting CI pipeline
